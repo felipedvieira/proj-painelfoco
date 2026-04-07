@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -13,6 +12,8 @@
 </head>
 
 <body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <div class="bg-shape"></div>
     <div class="hero">
         <div class="title">
@@ -30,10 +31,39 @@
                     <option value="Mentor">
                         Mentor
                     </option>
-                <input class="input-login" type="text" name="username" id="username" placeholder="Usuário">
+                </select>
+                <input class="input-login" type="text" name="username" id="username" placeholder="Usuário"> 
                 <input class="input-login" type="password" name="password" id="password" placeholder="Senha" >
                 <input class="button-login" type="button" id="login" name="login" value="Login">
+                
             </form>
         </div>
     </div>
+    <div class="cadastro hide">
+        <button id="close" style="float: right;">X</button>
+        <form action="">
+            Primeiro Nome:<br>
+            <input type="text" name="firstname" placeholder="Nome" class="input-login">
+            <br>
+             Último Sobrenome:<br>
+            <input type="text" name="lastname" placeholder="Sobrenome" class="input-login">
+            <br><br>
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+    <button class="signup" id="show">Primeiro acesso? Cadastre-se aqui.</button>
+    
+<script>
+$('#show').on('click', function () {
+    $('.cadastro').show();
+    $(this).hide();
+})
+
+$('#close').on('click', function () {
+    $('.cadastro').hide();
+    $('#show').show();
+})
+</script>
+    
 </body>
+</html>
