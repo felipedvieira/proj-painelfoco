@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+}
+
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+.bg-shape{
+    background-color: #3A5A8C;
+    position: absolute;
+    height: 1500px;
+    width: 700px;
+    z-index: -1;
+    left: -150px;
+    rotate: calc(159deg);
+
+}
+
+.logo{
+    border-radius: 15px;
+}
+
+.h1-title{
+    color: #3A5A8C;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 36px;
+    padding-left: 22px;
+
+}
+.hero{
+    background-color: whitesmoke;
+    width: 1440px;
+    height: 775px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    padding-left: 250px;
+}
+
+.login-input{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    width: 459px;
+    height: 366px;
+    padding-right: 150px;
+}
+
+.input-login{
+    width: 459px;
+    height: 77px;
+    background-color: #7A869A;
+    color: #2F3A45;
+    border: solid 2px #4A6FA5;
+    border-radius: 15px;
+}
+
+.input-login::placeholder{
+    color: #2F3A45;
+    padding-left: 15px;
+    font-size:16px;
+}
+
+.select-login{
+    width: 468px;
+    height: 77px;   
+    background-color: #CFECF6;
+    border: solid 2px #4A6FA5;
+    border-radius: 15px;
+    padding-left: 15px;
+    font-size:16px;
+}
+
+.button-login{
+    width: 468px;
+    height: 77px;
+    background-color: #3A5A8C;
+    border-radius: 15px;
+    border: solid 2px #4A6FA5;
+    color: white;
+    font-size: 16px;
+}
+
+.button-login:hover{
+    background-color: #4A6FA5;
+}
