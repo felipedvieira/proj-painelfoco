@@ -112,9 +112,7 @@ body{
     padding: 8px;
     align-self: flex-start;
     text-decoration: underline;
-    position: absolute;
-    left: 980px;
-    top: 620px;
+
 }
 
 .signup:hover{
@@ -126,9 +124,15 @@ body{
     display: none;
 }
 
+.login-flex{
+    display: flex;
+    flex-direction: column;
+}
+
 .cadastro{
-    position: absolute;
+    position: fixed;
     align-self: center;
+    left: 450px;
     z-index: 999;
     width: 800px;
     height: 400px;
