@@ -34,7 +34,7 @@
                 </select>
                 <input class="input-login" type="text" name="username" id="username" placeholder="Usuário"> 
                 <input class="input-login" type="password" name="password" id="password" placeholder="Senha" >
-                <input class="button-login" type="button" id="login" name="login" value="Login">
+                <input class="button-login" type="button" id="login" name="login" value="Login" onclick="Redirecionar()">
                 </div>
             </form>
         
@@ -68,6 +68,18 @@ $('#close').on('click', function () {
     $('.cadastro').hide();
     $('#show').show();
 })
+
+function Redirecionar(){
+    const valor = document.getElementById("origem").value;
+
+    if(valor === "Estudante"){
+        window.location.href = "Dashboard.html";
+    } else if (valor === "Mentor"){
+        window.location.href = "MentorDashboard.html";
+    } else {
+        alert("Selecione a origem.");
+    }
+}
 </script>
     
 </body>
