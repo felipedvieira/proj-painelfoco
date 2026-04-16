@@ -12,13 +12,15 @@
 </head>
 
 <body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <div class="bg-shape"></div>
     <div class="hero">
         <div class="title">
             <img src="logo.png" alt="" class="logo">
             <h1 class="h1-title">Painel Foco</h1>
         </div>
-        
+        <div class="login-flex">
             <form action="">
                 <div class="login-input">
                 <select class="select-login" name="origem" id="origem" placeholder="Origem">
@@ -29,10 +31,56 @@
                     <option value="Mentor">
                         Mentor
                     </option>
-                <input class="input-login" type="text" name="username" id="username" placeholder="Usuário">
+                </select>
+                <input class="input-login" type="text" name="username" id="username" placeholder="Usuário"> 
                 <input class="input-login" type="password" name="password" id="password" placeholder="Senha" >
-                <input class="button-login" type="button" id="login" name="login" value="Login">
+                <input class="button-login" type="button" id="login" name="login" value="Login" onclick="Redirecionar()">
+                </div>
             </form>
-        </div>
+        
+    <div class="cadastro hide">
+        <button id="close" style="float: right;">X</button>
+        <form action="">
+            Primeiro Nome:<br>
+            <input type="text" name="firstname" placeholder="Nome" class="input-login">
+            <br>
+             Último Sobrenome:<br>
+            <input type="text" name="lastname" placeholder="Sobrenome" class="input-login">
+            <br><br>
+            Tipo de Conta:<br>
+            <input type="radio" id="Estudante" name="account-type">
+            <label for="Estudante">Estudante</label>
+            <input type="radio" id="Mentor" name="account-type">
+            <label for="Mentor">Mentor</label>
+        <input type="submit" value="Submit">
+        </form>
     </div>
+    <button class="signup" id="show">Primeiro acesso? Cadastre-se aqui.</button>
+    </div>
+    </div>
+<script>
+$('#show').on('click', function () {
+    $('.cadastro').show();
+    $(this).hide();
+})
+
+$('#close').on('click', function () {
+    $('.cadastro').hide();
+    $('#show').show();
+})
+
+function Redirecionar(){
+    const valor = document.getElementById("origem").value;
+
+    if(valor === "Estudante"){
+        window.location.href = "Dashboard.html";
+    } else if (valor === "Mentor"){
+        window.location.href = "MentorDashboard.html";
+    } else {
+        alert("Selecione a origem.");
+    }
+}
+</script>
+    
 </body>
+</html>

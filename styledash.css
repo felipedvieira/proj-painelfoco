@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    height: 100%;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+section{
+    display: flex;
+    height: auto;
+}
+.headerf{
+    background-color: whitesmoke;
+    height: 95px;
+    width: auto;
+    display: flex;
+    border-bottom: 2px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    margin-left: 50px;
+}
+
+.header-leftnav{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.logout-button{
+    background-color: #3A5A8C;
+    color: white;
+    width: 105px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.sidemenu{
+    display: flex;
+    width: 264px;
+    height: 100%;
+    background-color: #3A5A8C;
+}
+
+.nav-sidemenu{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidemenu-button{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    width: 264px;
+    height: 100px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidemenu-button:active{
+    background-color: #7f848d;
+}
+
+.sidemenu-button:hover{
+    background-color: #4e6891;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.footer{
+    width: 400px;
+    margin: 0 auto;
+    color: #7f848d86;
+    font-weight: 200;
+}
+
+.alerts-main{
+    width: 1342px;
+    height: 251px;
+    background-color: whitesmoke;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+.alerts-container{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.alerts-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 341px;
+    height: 89px;
+    border:#3A5A8C 1px solid;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #69b0da;
+    background-color: white;
+    font-size: 22px;
+    color: #3A5A8C;
+    
+}
+
+.calendar-main{
+    width: 1342px;
+    height: 455px;
+    background-color: whitesmoke;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+}
+
+table,th,td{
+    border: solid 2px #3A5A8C;
+    border-collapse: collapse;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+th{
+    background-color: #4e6891;
+}
+
+table{
+    width: 1258px;
+    height: 320px;
+}
+
