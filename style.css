@@ -120,25 +120,15 @@ body{
     background-color: #f0f0f0;
 }
 
-.hide{
-    display: none;
-}
 
 .login-flex{
     display: flex;
     flex-direction: column;
 }
 
-.cadastro{
-    position: fixed;
-    align-self: center;
-    left: 450px;
-    z-index: 999;
-    width: 800px;
-    height: 400px;
-    padding: 20px;
-    box-shadow: 0 4px 8px solid black;
-    background-color: whitesmoke;
-    border: solid 2px #4A6FA5;
-    border-radius: 15px;
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
