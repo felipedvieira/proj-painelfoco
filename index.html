@@ -21,7 +21,7 @@
             <h1 class="h1-title">Painel Foco</h1>
         </div>
         <div class="login-flex">
-            <form action="">
+            <form>
                 <div class="login-input">
                 <select class="select-login" name="origem" id="origem" placeholder="Origem">
                     <option value="" disabled selected>Origem</option>
@@ -37,37 +37,52 @@
                 <input class="button-login" type="button" id="login" name="login" value="Login" onclick="Redirecionar()">
                 </div>
             </form>
-        
-    <div class="cadastro hide">
-        <button id="close" style="float: right;">X</button>
-        <form action="">
-            Primeiro Nome:<br>
-            <input type="text" name="firstname" placeholder="Nome" class="input-login">
+        <button class="signup" id="openButton">Primeiro acesso? Cadastre-se aqui.</button>
+            
+            <dialog id="modalDialog" class="center">
+                <button id="closeButton" style="float: right;">X</button>
+                <h2>Formulário de Cadastro:</h2>
+                
+                <form>
+                    Primeiro Nome:<br>
+                <input type="text" name="firstname" placeholder="Nome" class="input-login">
             <br>
-             Último Sobrenome:<br>
-            <input type="text" name="lastname" placeholder="Sobrenome" class="input-login">
-            <br><br>
-            Tipo de Conta:<br>
+                Último Sobrenome:<br>
+                <input type="text" name="lastname" placeholder="Sobrenome" class="input-login">
+                <br><br>
+                Tipo de Conta:<br>
             <input type="radio" id="Estudante" name="account-type">
             <label for="Estudante">Estudante</label>
             <input type="radio" id="Mentor" name="account-type">
             <label for="Mentor">Mentor</label>
         <input type="submit" value="Submit">
-        </form>
-    </div>
-    <button class="signup" id="show">Primeiro acesso? Cadastre-se aqui.</button>
-    </div>
-    </div>
-<script>
-$('#show').on('click', function () {
-    $('.cadastro').show();
-    $(this).hide();
-})
+            </dialog>
 
-$('#close').on('click', function () {
-    $('.cadastro').hide();
-    $('#show').show();
-})
+
+    
+    </div>
+    </div>
+
+
+<script>
+
+    const dialog = document.querySelector("#modalDialog");
+    const open = document.querySelector("#openButton");
+    const close = document.querySelector("#closeButton");
+
+    open.addEventListener("click", (e) => {
+        dialog.showModal();
+    });
+
+    close.addEventListener("click", (e) => {
+        dialog.close();
+    });
+
+    dialog.addEventListener("click", (e) => {
+        if(event.target === dialog) {
+            dialog.close();
+        }
+    });
 
 function Redirecionar(){
     const valor = document.getElementById("origem").value;
